@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <set>
+#include <unordered_set>
 //-----------------------------------------------------------------
 namespace
 {
@@ -9,7 +9,7 @@ namespace
 //-----------------------------------------------------------------
 bool checkIfPangram(std::string sentence)
 {
-  std::set<char> chars;
+  std::unordered_set<char> chars;
   for (const auto ch : sentence)
     chars.insert(ch);
   return chars.size() == l_minLen;
