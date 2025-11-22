@@ -27,8 +27,8 @@ function(add_leetcode_problems category_dir)
 endfunction()
 
 add_leetcode_problems("easy")
-#add_leetcode_problems("medium")
-#add_leetcode_problems("hard")
+add_leetcode_problems("medium")
+add_leetcode_problems("hard")
 
 file(GLOB_RECURSE all_problems LIST_DIRECTORIES false "*/main.cpp")
 foreach(problem_file ${all_problems})
