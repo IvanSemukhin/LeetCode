@@ -13,8 +13,7 @@ function(add_leetcode_problems category_dir)
       get_filename_component(problem_name ${problem_dir} NAME)
       if(EXISTS ${problem_dir}/main.cpp)
         add_executable(${problem_name} ${problem_dir}/main.cpp)
-        set_target_properties
-        (
+        set_target_properties(
           ${problem_name} PROPERTIES
           RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${category_dir}
           FOLDER "LeetCode/${category_dir}"
@@ -40,8 +39,7 @@ endforeach()
 
 list(REMOVE_DUPLICATES ALL_LEETCODE_TARGETS)
 
-add_custom_target
-(
+add_custom_target(
   all_problems
   DEPENDS ${ALL_LEETCODE_TARGETS}
   COMMENT "Building all LeetCode problems"
