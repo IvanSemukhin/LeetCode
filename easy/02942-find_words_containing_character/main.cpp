@@ -40,9 +40,13 @@ int main()
 {
   std::cout << "find words containing character" << std::endl;
 
-  printContainer(findWordsContaining({"leet", "code"}, 'e')); // 0 1
-  printContainer(findWordsContaining({"abc","bcd","aaaa","cbc"}, 'a')); // 0 2
-  printContainer(findWordsContaining({"abc","bcd","aaaa","cbc"}, 'z'));
+  //printContainer(findWordsContaining({"leet", "code"}, 'e')); // 0 1
+  //printContainer(findWordsContaining({"abc","bcd","aaaa","cbc"}, 'a')); // 0 2
+  //printContainer(findWordsContaining({"abc","bcd","aaaa","cbc"}, 'z'));
+
+  std::cout << (findWordsContaining({"leet", "code"}, 'e')); // 0 1
+  std::cout << (findWordsContaining({"abc","bcd","aaaa","cbc"}, 'a')); // 0 2
+  std::cout << (findWordsContaining({"abc","bcd","aaaa","cbc"}, 'z'));
 
   return 0;
 }
