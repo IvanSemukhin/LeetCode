@@ -1,24 +1,10 @@
 #include <iostream>
-
+//----------------------------------------------------------------------------------------------------------------------
 int differenceOfSums(int n, int m)
 {
-  if (m > n)
-    return (n * (n + 1)) / 2;
-
-  if (m == 1)
-    return -(n * (n + 1)) / 2;
-
-  int divSum = 0;
-  int nonDivSum = 0;
-  for (int i = 1; i <=n; ++i)
-    if (i % m)
-      nonDivSum += i;
-    else
-      divSum += i;
-
-  return nonDivSum - divSum;
+  return n * (n + 1) / 2 - m * (n/m) * (n/m + 1);
 }
-
+//----------------------------------------------------------------------------------------------------------------------
 int main()
 {
   std::cout << "divisible and non divisible sums difference" << std::endl;
@@ -29,3 +15,4 @@ int main()
 
   return 0;
 }
+//----------------------------------------------------------------------------------------------------------------------
